@@ -231,6 +231,14 @@ When the screen is less than 768 pixels wide hide all links and display only the
      /* Responsive */
     @media screen and (max-width: 768px) {
 
+		.projects h2,
+  .trips h2,
+  .contact h2 {
+    width: 100%;      /* full width */
+    margin: 0 0 1.5rem 0;  /* remove auto centering */
+    text-align: center;    /* optional: keep text centered */
+  }
+
 nav {
       display: flex;
       justify-content: flex-end;
