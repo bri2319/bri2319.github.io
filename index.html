@@ -1,25 +1,378 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title> bricen hicks </title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bricen's Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    nav {
+      background: #66c4ff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4rem;
+      padding: 2rem;
+    }
+
+/* Change the color of links on hover */
+     nav a:hover {
+       color:  #ffc067;
+    }
+
+/* Hide the link that should open and close the topnav on small screens */
+  nav .icon {
+  display: none;
+}
+
+    /* About  Section */
+     .about {
+   display: flex;
+  gap: 5rem;
+  padding: 3rem 2rem;
+  background-color: white;
+  flex-wrap: wrap;
+  justify-content: center;  /* centers image + text block */
+  align-items: center;      /* vertically aligns */
+  text-align: center;       /* centers text inside */
+}
+
+.about img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10%; /* Makes the image circular */
+  object-fit: cover;
+  background-color: #e0e0e0;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.5;
+  flex: 1;
+}
+
+.about-text h2 {
+  margin-top: 2rem; 
+  font-size: 4rem;
+  
+}
+.about-text h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* Change the color of heading on hover */
+     .about h3:hover {
+       color:  #ffc067;
+    }
+
+.about-text p {
+  margin-bottom: 1.5rem; /* space before button */
+  line-height: 1.6;      /* better readability */
+}
+
+.about-text a {
+  padding: .5rem;
+  border: none;
+  background-color: #ffc067;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* Change the color of links on hover */
+     .about a:hover {
+      background-color: #66c4ff ;
+    }
+
+
+    /* End of About Section */
+
+
+    /* projects Grid */
+    .projects h2 {
+  width: 25%;
+  background-color: #66f4ff;
+  padding: 1rem 0;
+  margin: 0 auto 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  }
+    .projects-container {
+      display: flex;
+  flex-direction: column;  /* stack projects vertically */
+  gap: 1.5rem;               /* space between projects */
+  margin: 3rem auto;
+  max-width: 1000px;       /* optional max width */
+    }
+    .project {
+     display: flex;            /* row layout: image left, text right */
+  gap: 1.5rem;              /* space between image and text */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  align-items: flex-start;  /* align image top with text */
+  flex-wrap: nowrap;          /* stops stacking on small screens */
+}
+    
+    .project img {
+     display: block;
+  width: 200px;              /* fixed width */
+  min-width: 150px;          /* prevents image from shrinking too much */
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+    }
+
+    /* Project text container */
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;                  /* text takes remaining space */
+  max-width: 600px;          /* limit text width */
+  word-wrap: break-word;     /* break long words if needed */
+}
+
+/* Project text */
+.projectDescription h3 {
+  padding: .5rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.projectDescription p {
+  padding: .5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+.projectDescription a {
+  display: inline-block;       /* shrink to fit content */
+  align-self: flex-start;
+ padding: .5rem;
+  border: none;
+  background-color: #66c4ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* Change the color of links on hover */
+     .projectDescription a:hover {
+      background-color: #ffc067 ;
+    }
+
+    /* Trips Grid */
+    .trips h2 {
+  width: 25%;
+  background-color: #66c4ff;
+  padding: 1rem 0;
+  margin: 0 auto 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  }
+    .trips-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 4rem;
+    }
+    .trip {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    .trip img {
+      display: block;       /* makes margin auto work */
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      background: #ccc;
+      margin: 0 auto 0.5rem;
+      border-radius: 5px;
+    }
+
+    /* Contact */
+    .contact h2 {
+  width: 25%;
+  background-color: #ffc067;
+  padding: 1rem 0;
+  margin: 0 auto 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  }
+    .contact {
+      margin-top: 3rem; 
+      text-align: center;
+    }
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem;
+      font-size: 2rem;
+      flex-wrap: wrap;
+    }
+
+
+/* 
+When the screen is less than 768 pixels wide hide all links and display only the hamburger icon aligned to the right
+
+
+*/
+     /* Responsive */
+    @media screen and (max-width: 768px) {
+
+nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem;
+
+}
+nav a {  display:none;  }
+nav a.icon{ display: block; }
+
+ nav.responsive {
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  align-items: flex-end;  /* align links to the right */
+  
+
+}
+
+nav.responsive a { display: block;}
+
+      .about img {
+        display: none; 
+      }
+
+	}
+
+
+  </style>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-
-
 <body>
 
-	
-	
 
-    <h1>Bricen Hicks</h1>
-	
 
-	
+  <!-- Navbar -->
+  <nav class="nav" id="mynav" >
+    <a href="javascript:void(0);" class="icon" onclick="burgerMenu()"> 
+     <i class="fa fa-bars"></i>
+    </a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#trips">Trips</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+
+
+
+  <!-- About Section -->
+  <section id="about" class="about" >
+    <div class="about-text">
+      <h3>Hi there, I’m Bricen</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitThis is a samp
+        le paragraph for the about section. You can replace this with your conte
+        nt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuerTh
+        is is a sample paragraph for the about section. You can replace this with your
+         content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam posuer...
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitThis is a samp
+        le paragraph for the about section. You can replace this with your conte
+        ctetur adipiscing elit. Nullam posuer...
+        </p>
+      <a href="images/bricen resume.pdf" target="_blank" class="btn">Resume</a>
+    </div>
+    <img src="images/me.jpg"  alt="Profile Image Placeholder">
+  </section>
+
+  <!-- Projects -->
+  <section id="projects"class="projects" >
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project"><img src="images/gage.png" alt="project">
+          <div class="projectDescription"><h3>landscaping website</h3>
+              <p>Business Website for one of my friends that would give people 
+                more information about what his company can do.  It also has a quote feature that will send an email to him with new inquiries information </p>
+                <a href="https://bri2319.github.io/GPark-Lawn-Care/" target="_blank" class="btn">github page</a>
+            </div>
+      </div>
+      <div class="project"><img src="images/ruby.png" alt="project">
+        <div class="projectDescription"><h3>Ruby on Rails</h3>
+          <p>Personal website that uses postgres for displaying information and logging in to add more information as an admin</p>
+          <a href="https://github.com/bri2319/ruby-rails-tutorial" target="_blank" class="btn">github of the code</a>
+        </div>
+      </div>
+      <div class="project"><img src="images/site.png" alt="project">
+        <div class="projectDescription"><h3>Me Website</h3>
+          <p>Adding and keeping this website up to date on the random trips or projects I decide to start</p>
+          <a href="#" class="btn">already here</a>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- Trips -->
+  <section id="trips"class="trips"  >
+    <h2>Trips</h2>
+    <div class="trips-container">
+      <div class="trip"><img src="images/grandcanyon.jpg" alt="Trip"><h3>The Grand Canyon</h3><p>backpacking trip to a big hole in the earth</p></div>
+      <div class="trip"><img src="images/utah.jpg" alt="Trip"><h3>Utah</h3><p>snowboarding in the most powdery place I've ever been</p></div>
+      <div class="trip"><img src="images/washington.jpg" alt="Trip"><h3>Washington</h3><p>backpacking to Spectacle and Glacier Lake</p></div>
+      <div class="trip"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact"class="contact" >
+    <h2>Contact</h2>
+    <div class="socials">
+  <a href="https://github.com/bri2319" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/bricen-hicks" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-linkedin"></i>
+  </a>
+</div>
+  </section>
+
+
+<script> 
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function burgerMenu() {
+  var x = document.getElementById("mynav");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+} 
+
+</script>
 
 </body>
 </html>
