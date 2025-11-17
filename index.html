@@ -199,6 +199,38 @@
       border-radius: 5px;
     }
 
+	   /* Climbing Grid */
+    .climbing h2 {
+  width: 25%;
+  background-color: #66c4ff;
+  padding: 1rem 0;
+  margin: 0 auto 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  }
+    .climbing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 4rem;
+    }
+    .climb {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 1rem;
+    }
+    .climb img {
+      display: block;       /* makes margin auto work */
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      background: #ccc;
+      margin: 0 auto 0.5rem;
+      border-radius: 5px;
+    }
+
     /* Contact */
     .contact h2 {
   width: 25%;
@@ -284,6 +316,13 @@ nav.responsive a { display: block;}
 
   /* Trips section */
   .trips-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 1rem;
+  }
+
+		/* climbing section */
+  .climbing-container {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin: 2rem 1rem;
@@ -374,6 +413,18 @@ nav.responsive a { display: block;}
 		<div class="trip"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
 		<div class="trip"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
 		<div class="trip"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+    </div>
+  </section>
+
+	<!-- climbing -->
+  <section id="climbing"class="climbing"  >
+    <h2>Climbs</h2>
+    <div class="climbing-container">
+		<div class="climb"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+		<div class="climb"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+		<div class="climb"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+		<div class="climb"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
+		<div class="climb"><img src="images/zion.jpg" alt="Trip"><h3>Zion</h3><p>walking around the park seeing the sites</p></div>
     </div>
   </section>
 
