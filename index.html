@@ -189,15 +189,13 @@
       border-radius: 5px;
       padding: 1rem;
     }
-    .trip img {
-      display: block;       /* makes margin auto work */
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      background: #ccc;
-      margin: 0 auto 0.5rem;
-      border-radius: 5px;
-    }
+.trip img {
+  display: block;
+  width: 100%;
+  height: 220px;      /* same height for all */
+  object-fit: cover;  /* crops image instead of stretching */
+  border-radius: 5px;
+}
 
 	   /* Climbing Grid */
     .climbing h2 {
